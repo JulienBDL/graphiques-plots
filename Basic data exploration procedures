@@ -1,0 +1,17 @@
+#Basic data exploration procedures
+
+hist(dataset$Variable1)
+#log transformation for better visualization
+
+hist(log(dataset$Variable1))
+hist(dataset$Variable2)
+hist(log(dataset$Variable2))
+
+#etc
+
+#plots
+
+bwplot(dataset$Variable1 ~ dataset$RandomEffect1, varwidth=T)
+
+xyplot(dataset$Variable1 ~ dataset$RandomEffect2|dataset$FixedEffect1, type=c("p", "l"))
+xyplot(dataset$Variable2 ~ dataset$RandomEffect2|dataset$FixedEffect1, type=c("p", "l"))
